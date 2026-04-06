@@ -11,9 +11,8 @@ function Movies() {
 
   useEffect(() => {
     const searchTerm = movie || defaultSearch;
-    const pageNumber = page ? page.slice(5) : 1;
+    const pageNumber = page ? page.slice(5) : 1;  
     setCurrentPage(pageNumber);
-
     const fetchData = async () => {
       
       const res = await fetch(

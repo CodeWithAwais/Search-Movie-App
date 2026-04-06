@@ -7,7 +7,7 @@ function SearchBar(){
     const [searchValue, setSearchValue] = useState('');
 
     const handleInput = (e) => {
-        if(e.key == 'Enter' && searchValue.trim() !== ''){
+        if(e.key === 'Enter' && searchValue.trim() !== ''){
             navigate(`/${searchValue}/page=1`);
         }
     }

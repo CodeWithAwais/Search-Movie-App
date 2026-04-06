@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function Navbar(){
     return(<>
     <div className="bg-[rgb(31,41,55)] py-5 px-10 text-white flex justify-between">
-        <div className=" flex gap-1 items-center">
+        <div className="flex gap-1 items-center">
             <Clapperboard color="red" />
             <NavLink to={'/marvel/page=1'}><h1 className="text-xl font-bold">MoviesFlix</h1></NavLink>
         </div>
