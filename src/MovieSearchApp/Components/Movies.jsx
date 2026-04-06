@@ -12,8 +12,8 @@ function Movies() {
   useEffect(() => {
     const searchTerm = movie || defaultSearch;
     const pageNumber = page ? parseInt(page.slice(5)) : 1;
+
     const fetchData = async () => {
-      
       const res = await fetch(
         `https://www.omdbapi.com/?i=tt4154796&apikey=5a42856b&s=${searchTerm}&page=${pageNumber}`
       );
