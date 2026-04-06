@@ -11,8 +11,7 @@ function Movies() {
 
   useEffect(() => {
     const searchTerm = movie || defaultSearch;
-    const pageNumber = page ? page.slice(5) : 1;  
-    setCurrentPage(pageNumber);
+    const pageNumber = page ? parseInt(page.slice(5)) : 1;
     const fetchData = async () => {
       
       const res = await fetch(
@@ -21,6 +20,7 @@ function Movies() {
       const data = await res.json();
       console.log(data);
       const totalPages = Math.ceil(data.totalResults / 10);
+      setCurrentPage(pageNumber);
       setTotalPages(totalPages);
       setMovieCards(data.Search);
     };
